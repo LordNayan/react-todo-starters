@@ -1,12 +1,12 @@
 import ListItem from "./ListItem";
 
-export default function List(items) {
+export default function List({ todos }) {
   return (
     <>
       <ul>
-        <h1 className="header">TODO List</h1>
-        {items.forEach((item) => {
-          <ListItem key={item.id} value={item.title} />;
+        {todos.length === 0 && "No Todos"}
+        {todos.map((todo) => {
+          return <ListItem key={todo.id} todo={todo} />;
         })}
       </ul>
     </>

@@ -9,14 +9,15 @@ export function Form({ onSubmit }) {
     if (newItem.length) {
       onSubmit(newItem);
     }
+    setNewItem("");
   }
   return (
     <form onSubmit={handleSubmit} className="new-item-form">
       <div className="form-row">
-        <label htmlFor="Item">New Item</label>
         <input
           value={newItem}
           onChange={(e) => setNewItem(e.target.value)}
+          placeholder="Add Item"
           type="text"
           id="item-search-bar"
         />
