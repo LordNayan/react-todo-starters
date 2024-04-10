@@ -1,13 +1,16 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import "../styles.css";
+import { addTodo } from "../redux/features/todo/todoSlice";
 
-export function Form({ onSubmit }) {
+export function Form() {
   const [newItem, setNewItem] = useState("");
+  const dispatch = useDispatch();
 
   function handleSubmit(e) {
     e.preventDefault();
     if (newItem.length) {
-      onSubmit(newItem);
+      dispatch(addTodo(newItem));
     }
     setNewItem("");
   }
@@ -19,10 +22,10 @@ export function Form({ onSubmit }) {
           onChange={(e) => setNewItem(e.target.value)}
           placeholder="Add Item"
           type="text"
-          id="item-search-bar"
+          className="item-search-bar"
         />
       </div>
-      <button className="addBtn">Add</button>
+      <button className="add-btn">Add</button>
     </form>
   );
 }

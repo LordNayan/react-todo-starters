@@ -1,13 +1,10 @@
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext } from "react";
 import "./styles.css";
 import { Form } from "./components/Form";
 import List from "./components/List";
 export const AppState = createContext("appContext");
 export default function App() {
   const [todos, setTodos] = useState([]);
-  useEffect(() => {
-    console.log(todos);
-  }, [todos]);
 
   function addTodo(title) {
     setTodos((currentTodos) => [
