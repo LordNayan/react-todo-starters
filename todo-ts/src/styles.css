@@ -4,12 +4,56 @@ body {
 
 .input-form {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .add-btn {
   padding: 2px;
-  margin: 2px;
-  height: 20px;
+  height: 30px;
+  width: 30px;
+  background-color: orange;
+  border-radius: 2px;
+  border-color: black;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-btn {
+  background-color: pink;
+  border: black;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.add-btn:hover {
+  background-color: green;
+  transition: 0.5;
+  size: 50px;
+}
+
+.delete-btn:hover {
+  background-color: red;
+  border-color: red;
+  transition: 0.5;
+  size: 50px;
+}
+
+.list-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px;
+  padding: 5px;
+}
+
+ul {
+  padding: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Courier New", Courier, monospace;
 }

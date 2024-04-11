@@ -12,6 +12,6 @@ export const ListItem: React.FC<Props> = ({todo})=>{
         <div className="list-item-text">
             <span>{todo.title}</span>
         </div>
-        <button onClick={()=> dispatch(removeTodo(todo.id))}>Delete</button>
+        <button className="btn delete-btn" onClick={()=> dispatch(removeTodo(todo.id))}>-</button>
     </div>)
 }
