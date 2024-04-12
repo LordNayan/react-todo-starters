@@ -1,0 +1,18 @@
+export const buttons = [
+  { title: "1" },
+  { title: "2" },
+  { title: "3" },
+  { title: "+" },
+  { title: "4" },
+  { title: "5" },
+  { title: "6" },
+  { title: "-" },
+  { title: "7" },
+  { title: "8" },
+  { title: "9" },
+  { title: "*" },
+  { title: "C" },
+  { title: "0" },
+  { title: "=" },
+  { title: "/" },
+];

@@ -1,10 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { ButtonPanel } from "./components /ButtonPanel";
+import { Display } from "./components /Display";
 
 function App() {
- return <h1>I am soon going to be a calculator.</h1>
+  return (
+    <div className="container">
+      <Display />
+      <ButtonPanel />
+    </div>
+  );
 }
 
-export default App
+export default App;
